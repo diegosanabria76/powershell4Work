@@ -1,0 +1,22 @@
+function Get-Diskinfo{
+
+[cmdletbinding()]
+param(
+    [Parameter(Mandatory=$true)]
+    [string] $computerName  = 'localhost',
+    [string] $drive = 'c:'
+
+
+)
+
+Get-WmiObject -Class win32_logicaldisk -Filter "DeviceID='C:'" -ComputerName 'LocalHost' 
+
+}
+
+
+Function Get-Diego{Write-Output "Powershell is fun!"}
+
+
+Function Get-Diego2{Write-Output "Powershell is more than wonderfull!"}
+
+
